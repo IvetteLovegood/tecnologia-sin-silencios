@@ -15,7 +15,7 @@ const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwxpQiSro2iwIsG
 export async function enviarSolicitudMentoria(
   data: MentoriaFormData
 ): Promise<{ ok: boolean; error?: string }> {
-  if (APPS_SCRIPT_URL === 'REEMPLAZAR_CON_URL_DEL_DEPLOY') {
+  if (APPS_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbwxpQiSro2iwIsGtDNqFYEbx9v2v1A0ssmHqulJOKDvwN1QSpj9nGpvOiemA-PAmtsMFA/exec') {
     console.warn('Apps Script URL no configurada — modo simulación')
     // En desarrollo, simular envío exitoso
     await new Promise(r => setTimeout(r, 1000))
