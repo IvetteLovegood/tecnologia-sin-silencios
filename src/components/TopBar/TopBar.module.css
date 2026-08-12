@@ -1,0 +1,64 @@
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background: rgba(247, 246, 251, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--borde);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--txt);
+  white-space: nowrap;
+}
+
+.camino {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.tb-est { background: var(--ps); color: var(--pm); }
+.tb-pro { background: #E0F2EC; color: #085041; }
+
+.track {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.pip {
+  height: 3px;
+  flex: 1;
+  border-radius: 2px;
+  background: var(--borde);
+  transition: background .3s;
+}
+.done { background: var(--pm); }
+.now  { background: var(--rosa); }
+
+.num {
+  font-size: 11px;
+  color: var(--txts);
+  white-space: nowrap;
+}
+
+.back {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: var(--txts);
+  cursor: pointer;
+  padding: 0;
+}
+.back:hover { color: var(--txt); }

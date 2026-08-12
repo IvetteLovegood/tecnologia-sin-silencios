@@ -1,0 +1,159 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 48px 24px;
+  background: #18141F;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(107,75,196,.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107,75,196,.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(107,75,196,.2) 0%, transparent 65%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.glow2 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212,64,106,.12) 0%, transparent 70%);
+  bottom: 10%;
+  right: 10%;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 580px;
+  width: 100%;
+}
+
+.tagTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(107,75,196,.2);
+  border: 1px solid rgba(107,75,196,.35);
+  color: #B09EE8;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ADE80;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.4; } }
+
+.codeTag {
+  display: inline-flex;
+  background: rgba(247,246,251,.07);
+  border: 1px solid rgba(247,246,251,.12);
+  color: rgba(247,246,251,.4);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 8vw, 60px);
+  font-weight: 800;
+  color: #F7F6FB;
+  line-height: 1.05;
+  margin-bottom: 10px;
+  letter-spacing: -.02em;
+}
+.title span { color: #B09EE8; }
+
+.sub {
+  font-size: 17px;
+  color: rgba(247,246,251,.55);
+  line-height: 1.7;
+  margin: 18px auto 32px;
+  max-width: 440px;
+}
+
+.rutas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 520px;
+  margin: 0 auto 28px;
+  text-align: left;
+}
+
+.ruta {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(176,158,232,.2);
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+  text-align: left;
+}
+.ruta:hover {
+  background: rgba(176,158,232,.1);
+  border-color: rgba(176,158,232,.45);
+}
+.principal {
+  border-color: rgba(107,75,196,.5);
+  background: rgba(107,75,196,.08);
+}
+.principal:hover { background: rgba(107,75,196,.15); }
+
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.badgePri { background: rgba(107,75,196,.3); color: #B09EE8; }
+.badgeSec { background: rgba(255,255,255,.08); color: rgba(247,246,251,.5); }
+
+.rutaIco  { font-size: 24px; margin-bottom: 8px; }
+.rutaTitle { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: #F7F6FB; margin-bottom: 6px; }
+.rutaDesc  { font-size: 13px; color: rgba(247,246,251,.5); line-height: 1.55; }
+
+.rutaCta { display: inline-flex; margin-top: 14px; font-size: 13px; font-weight: 500; color: #B09EE8; }
+.rutaCtaSec { color: rgba(176,158,232,.6); }
+
+.note { color: rgba(247,246,251,.25); font-size: 12px; }
+
+@media (max-width: 480px) {
+  .rutas { grid-template-columns: 1fr; }
+}

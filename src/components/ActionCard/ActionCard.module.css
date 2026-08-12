@@ -1,0 +1,28 @@
+.card {
+  display: flex;
+  gap: 16px;
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 10px;
+  transition: border-color .2s, background .2s;
+}
+.card:hover { border-color: var(--verde); background: var(--verdes); }
+
+.num {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--verde);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.title { font-size: 15px; font-weight: 500; margin-bottom: 3px; color: var(--txt); }
+.desc  { font-size: 13px; color: var(--txts); line-height: 1.55; }

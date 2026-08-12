@@ -1,0 +1,52 @@
+/* ── TOKENS ── */
+:root {
+  --p: #3B1F7A;
+  --pm: #6B4BC4;
+  --pl: #B09EE8;
+  --ps: #EDE8FA;
+  --rosa: #D4406A;
+  --rosas: #FCEEF2;
+  --verde: #1E7A5F;
+  --verdes: #E0F2EC;
+  --bg: #F7F6FB;
+  --txt: #18141F;
+  --txts: #5A5270;
+  --borde: #D8D2EF;
+  --white: #FFFFFF;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 50px;
+
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--txt);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

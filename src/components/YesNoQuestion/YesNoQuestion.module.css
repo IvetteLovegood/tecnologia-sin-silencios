@@ -1,0 +1,39 @@
+.wrap { margin-bottom: 20px; }
+
+.question {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--txt);
+  margin-bottom: 14px;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.opt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 50px;
+  border: 1px solid var(--borde);
+  background: white;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--txts);
+  cursor: pointer;
+  transition: all .18s;
+  font-family: var(--font-body);
+}
+.opt:hover { border-color: var(--pm); color: var(--p); background: var(--ps); }
+
+.ico { font-size: 13px; }
+
+/* Estados seleccionados */
+.sel_si    { background: var(--verdes) !important; border-color: var(--verde) !important; color: var(--verde) !important; }
+.sel_no    { background: var(--rosas)  !important; border-color: var(--rosa)  !important; color: var(--rosa)  !important; }
+.sel_tal_vez { background: var(--ps) !important; border-color: var(--pm) !important; color: var(--pm) !important; }

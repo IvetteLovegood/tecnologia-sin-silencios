@@ -1,0 +1,280 @@
+/* ── OVERLAY ── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(24, 20, 31, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn .2s ease;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* ── MODAL ── */
+.modal {
+  background: var(--bg);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 28px 28px 24px;
+  position: relative;
+  animation: slideUp .25s ease;
+}
+@keyframes slideUp { from { transform: translateY(16px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+/* ── CLOSE ── */
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--txts);
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+}
+.closeBtn:hover { color: var(--txt); }
+
+/* ── HEADER ── */
+.header { text-align: center; margin-bottom: 22px; }
+.headerIco { font-size: 32px; margin-bottom: 10px; }
+.headerTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--txt);
+  margin-bottom: 4px;
+}
+.headerSub { font-size: 13px; color: var(--txts); }
+
+/* ── CONSENTIMIENTO ── */
+.consentBox {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.consentTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--txt);
+  margin-bottom: 8px;
+}
+.consentDesc {
+  font-size: 13px;
+  color: var(--txts);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+/* ── RESUMEN ── */
+.resumen {
+  background: var(--ps);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+.resumenLabel {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--pm);
+  margin-bottom: 8px;
+}
+.resumenItem {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--p);
+  padding: 3px 0;
+  line-height: 1.5;
+}
+.resumenDot { color: var(--rosa); flex-shrink: 0; }
+
+/* ── CHECKBOX ── */
+.checkRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--pm);
+  margin-top: 2px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.checkLabel { font-size: 14px; color: var(--txt); line-height: 1.5; }
+.noCompartirNote {
+  font-size: 12px;
+  color: var(--txts);
+  font-style: italic;
+  margin-top: 8px;
+  padding-left: 26px;
+}
+
+/* ── PRIVACY LINE ── */
+.privacyLine {
+  font-size: 12px;
+  color: var(--txts);
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* ── FORMULARIO ── */
+.formBody { margin-bottom: 8px; }
+
+.field { margin-bottom: 18px; }
+
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--txt);
+  margin-bottom: 6px;
+}
+.req { color: var(--rosa); }
+.opt { color: var(--txts); font-weight: 400; }
+
+.input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--txt);
+  background: white;
+  font-family: var(--font-body);
+  transition: border-color .18s;
+  outline: none;
+}
+.input:focus { border-color: var(--pm); }
+.input::placeholder { color: var(--txts); opacity: .6; }
+
+.textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--txt);
+  background: white;
+  font-family: var(--font-body);
+  transition: border-color .18s;
+  resize: vertical;
+  outline: none;
+  line-height: 1.6;
+}
+.textarea:focus { border-color: var(--pm); }
+.textarea::placeholder { color: var(--txts); opacity: .6; }
+
+/* ── RADIO ── */
+.radioRow { display: flex; gap: 8px; flex-wrap: wrap; }
+.radioOpt {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border: 1px solid var(--borde);
+  border-radius: 30px;
+  font-size: 13px;
+  color: var(--txts);
+  cursor: pointer;
+  transition: all .18s;
+  background: white;
+}
+.radioOpt:hover { border-color: var(--pm); color: var(--p); }
+.radioSel { background: var(--ps) !important; border-color: var(--pm) !important; color: var(--p) !important; }
+.radioInput { display: none; }
+
+/* ── ERROR ── */
+.errMsg {
+  font-size: 13px;
+  color: var(--rosa);
+  background: var(--rosas);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-top: -4px;
+  margin-bottom: 8px;
+}
+
+/* ── BOTONES ── */
+.ctaRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+.btnSecondary {
+  padding: 11px 20px;
+  border-radius: 30px;
+  border: 1px solid var(--borde);
+  background: white;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--txts);
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: all .18s;
+}
+.btnSecondary:hover { border-color: var(--pm); color: var(--p); }
+.btnPrimary {
+  padding: 11px 22px;
+  border-radius: 30px;
+  background: var(--p);
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: background .18s;
+}
+.btnPrimary:hover { background: var(--pm); }
+
+/* ── ESTADOS: enviando / éxito / error ── */
+.centrado {
+  text-align: center;
+  padding: 16px 0;
+}
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--borde);
+  border-top-color: var(--pm);
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+  margin: 0 auto 16px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.centradoTxt { font-size: 15px; color: var(--txts); }
+
+.exitoIco { font-size: 40px; margin-bottom: 12px; }
+.errorIco { font-size: 40px; margin-bottom: 12px; }
+.exitoTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--txt);
+  margin-bottom: 12px;
+}
+.exitoTxt { font-size: 14px; color: var(--txts); line-height: 1.7; }
+
+@media (max-width: 480px) {
+  .modal { padding: 22px 18px 20px; }
+  .ctaRow { flex-direction: column-reverse; }
+  .btnPrimary, .btnSecondary { width: 100%; text-align: center; }
+}

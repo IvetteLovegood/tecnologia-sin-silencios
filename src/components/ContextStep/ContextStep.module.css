@@ -1,0 +1,23 @@
+.wrap { margin-bottom: 8px; }
+.question { margin-bottom: 24px; }
+.label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--txt);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid var(--borde);
+  background: white;
+  font-size: 14px;
+  color: var(--txts);
+  cursor: pointer;
+  transition: all .18s;
+  font-family: var(--font-body);
+}
+.chip:hover { border-color: var(--pm); color: var(--p); background: var(--ps); }
+.sel { background: var(--p) !important; border-color: var(--p) !important; color: white !important; }
