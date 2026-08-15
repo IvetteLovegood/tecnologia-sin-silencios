@@ -69,8 +69,6 @@ export function Home({ onSelect }: Props) {
           y no sabes bien cómo nombrarlo.
         </p>
 
-        <PrivacyNote variant="banner" />
-
         <div className={styles.rutas}>
           <button className={`${styles.ruta} ${styles.principal}`} onClick={() => setSubEst(true)}>
             <span className={`${styles.badge} ${styles.badgePri}`}>Camino principal</span>
@@ -93,7 +91,8 @@ export function Home({ onSelect }: Props) {
           </button>
         </div>
 
-        <p className={styles.note}>~12 minutos · sin registro · sin datos guardados · 100% confidencial</p>
+        <PrivacyNote variant="banner" />
+        <p className={styles.note}>~12 minutos · sin registro · 100% confidencial</p>
       </div>
     </div>
   )
