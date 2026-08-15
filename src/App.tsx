@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { Camino, UserResponses } from './data/types'
 import { estudiantes } from './data/estudiantes'
 import { profesionistas } from './data/profesionistas'
+import { preparatoria } from './data/preparatoria'
 import { TopBar } from './components/TopBar/TopBar'
 import { Home } from './pages/Home/Home'
 import { Journey } from './pages/Journey/Journey'
@@ -15,7 +16,7 @@ export default function App() {
   const [camino, setCamino] = useState<Camino>('est')
   const [responses, setResponses] = useState<UserResponses>({})
 
-  const data = camino === 'est' ? estudiantes : profesionistas
+  const data = camino === 'est' ? estudiantes : camino === 'prepa' ? preparatoria : profesionistas
 
   function handleSelect(c: Camino) {
     setCamino(c)

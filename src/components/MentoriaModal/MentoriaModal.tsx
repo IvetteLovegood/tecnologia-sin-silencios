@@ -5,7 +5,7 @@ import { enviarSolicitudMentoria, resumirRespuestas } from '../../data/sendMento
 import styles from './MentoriaModal.module.css'
 
 interface Props {
-  camino: 'est' | 'pro'
+  camino: 'est' | 'pro' | 'prepa'
   responses: UserResponses
   onClose: () => void
 }

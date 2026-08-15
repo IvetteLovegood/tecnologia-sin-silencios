@@ -42,8 +42,9 @@
   border-radius: 20px;
   white-space: nowrap;
 }
-.tb-est { background: var(--ps); color: var(--pm); }
-.tb-pro { background: #E0F2EC; color: #085041; }
+.tb-est   { background: var(--ps); color: var(--pm); }
+.tb-pro   { background: #E0F2EC; color: #085041; }
+.tb-prepa { background: #FFF0F6; color: #8B1A4A; }
 
 .track {
   display: flex;

@@ -154,6 +154,38 @@
 
 .note { color: rgba(247,246,251,.25); font-size: 12px; }
 
+.backLink {
+  background: none;
+  border: none;
+  color: rgba(176,158,232,.6);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 28px;
+  display: block;
+  transition: color .15s;
+}
+.backLink:hover { color: #B09EE8; }
+
+.subTitle {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 6vw, 40px);
+  font-weight: 800;
+  color: #F7F6FB;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  letter-spacing: -.02em;
+}
+
+.rutaPrepa {
+  border-color: rgba(212,64,106,.4);
+  background: rgba(212,64,106,.06);
+}
+.rutaPrepa:hover { background: rgba(212,64,106,.12); border-color: rgba(212,64,106,.6); }
+
+.badgePrepa { background: rgba(212,64,106,.25); color: #F4A0BC; }
+.rutaCtaPrepa { color: #F4A0BC; }
+
 @media (max-width: 480px) {
   .rutas { grid-template-columns: 1fr; }
 }

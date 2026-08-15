@@ -1,4 +1,4 @@
-export type Camino = 'est' | 'pro'
+export type Camino = 'est' | 'pro' | 'prepa'
 
 // ─── Respuestas de la persona usuaria ────────────────────────────────────────
 

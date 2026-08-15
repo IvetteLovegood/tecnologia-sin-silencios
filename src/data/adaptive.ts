@@ -31,9 +31,9 @@ export function derivarPerfil(r: UserResponses): PerfilAdaptativo {
  */
 export function adaptacionParaPerfil(
   perfil: PerfilAdaptativo,
-  camino: 'est' | 'pro'
+  camino: 'est' | 'pro' | 'prepa'
 ): AdaptacionPerfil {
-  const esStu = camino === 'est'
+  const esStu = camino === 'est' || camino === 'prepa'
 
   const adaptaciones: Record<PerfilAdaptativo, AdaptacionPerfil> = {
     sin_palabras: {
