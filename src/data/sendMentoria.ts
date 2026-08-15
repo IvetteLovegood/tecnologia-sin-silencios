@@ -10,7 +10,7 @@ import type { MentoriaFormData } from './types'
  * 4. Copia la URL del deploy y pégala en APPS_SCRIPT_URL abajo
  */
 
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzUJdIso0CFlnL-fZcLgtacnPM4cgGIouH5ypWIMSxShgn-4-tnmb3g5r3yvRZrJCPw/exec'
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzMjf0Iho83YfBdk8Z8GrdL6QTpeM637MCrPB_tX2S9Sipdpq_Z1aOmgQbUUMofTIFljg/exec'
 
 export async function enviarSolicitudMentoria(
   data: MentoriaFormData
