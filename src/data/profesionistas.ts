@@ -21,8 +21,8 @@ export const profesionistas: CaminoData = {
     },
   ],
 
-  evalQ1: '¿Qué tanto puedes identificar cuándo algo en tu trabajo no está bien, más allá de un simple malentendido?',
-  evalQ3: 'Si algo te hace sentir incómoda en tu equipo o empresa, ¿sabes qué podrías hacer al respecto?',
+  evalQ1: '¿Qué tanto puedes identificar si algo que viviste en tu trabajo tiene que ver con dinámicas de género o poder, y no solo con un malentendido?',
+  evalQ3: 'Si algo te hace sentir excluida o cuestionada en tu empresa, ¿sabes a quién acudir o qué opciones tienes?',
 
   m1Intro: 'A veces hay algo en el ambiente de tu equipo que no cuadra. En el standup nadie te mira cuando hablas. Tu PR lleva días sin review. Propones algo en la junta y lo ignoran, pero cuando lo repite alguien más, todo el mundo toma nota.',
   m1ChatIcon: '💬',

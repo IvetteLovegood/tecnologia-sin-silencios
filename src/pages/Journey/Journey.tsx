@@ -46,7 +46,7 @@ export function Journey({ data, step, camino, responses, onUpdate, onNext, onPre
         onChange={v => onUpdate({ eval1: v })}
       />
       <EvalScale
-        label="¿Qué tan fácil te resulta explicarle a alguien algo incómodo que viviste en tech?"
+        label="¿Qué tan fácil te resulta ponerle nombre a algo incómodo que viviste en un espacio de tech?"
         min="Muy difícil"
         max="Muy fácil"
         onChange={v => onUpdate({ eval2: v })}

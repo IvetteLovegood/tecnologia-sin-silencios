@@ -21,8 +21,8 @@ export const estudiantes: CaminoData = {
     },
   ],
 
-  evalQ1: '¿Qué tanto puedes identificar cuándo algo en tus clases o proyectos no está bien, más allá de un simple malentendido?',
-  evalQ3: 'Si algo te hace sentir incómoda en tu equipo o escuela, ¿sabes qué podrías hacer al respecto?',
+  evalQ1: '¿Qué tanto puedes identificar si algo que viviste en clases o proyectos tiene que ver con tu género o identidad, y no solo con tu desempeño?',
+  evalQ3: 'Si algo te hace sentir excluida o menospreciada en tu escuela, ¿sabes a quién acudir o qué podrías hacer?',
 
   m1Intro: 'A veces hay algo en el ambiente de tus clases o en tu equipo de proyecto que no cuadra. En clase nadie levanta la vista cuando hablas. Tu aportación la ignoran, pero si la repite alguien más la incluyen. Llevas días esperando retroalimentación de tu código y todos los demás ya recibieron la suya.',
   m1ChatIcon: '💬',
