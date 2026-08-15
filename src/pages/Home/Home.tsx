@@ -92,7 +92,7 @@ export function Home({ onSelect }: Props) {
         </div>
 
         <PrivacyNote variant="banner" />
-        <p className={styles.note}>~12 minutos · sin registro · 100% confidencial</p>
+        <p className={styles.note}>~7 minutos · sin registro · 100% confidencial</p>
       </div>
     </div>
   )
