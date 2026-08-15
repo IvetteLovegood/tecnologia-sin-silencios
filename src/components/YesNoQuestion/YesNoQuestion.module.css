@@ -1,11 +1,17 @@
-.wrap { margin-bottom: 20px; }
+.wrap {
+  margin-bottom: 20px;
+  background: white;
+  border: 1.5px solid var(--borde);
+  border-radius: 16px;
+  padding: 24px 20px 20px;
+}
 
 .question {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.55;
   color: var(--txt);
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 
 .options {

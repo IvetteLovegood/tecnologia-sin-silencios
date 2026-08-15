@@ -1,0 +1,115 @@
+.wrap {
+  margin: 24px 0;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--pm);
+  margin-bottom: 14px;
+}
+
+.card {
+  background: white;
+  border: 1.5px solid var(--borde);
+  border-radius: 16px;
+  padding: 28px 24px 24px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  transition: border-color .2s;
+}
+
+.counter {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--txts);
+}
+
+.pregunta {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--txt);
+  font-weight: 500;
+  flex: 1;
+}
+
+.masBtn {
+  align-self: flex-start;
+  background: none;
+  border: 1px solid var(--borde);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--pm);
+  padding: 5px 12px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  white-space: nowrap;
+  transition: background .15s, border-color .15s;
+}
+.masBtn:hover {
+  background: var(--ps);
+  border-color: var(--pm);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding: 0 4px;
+}
+
+.navBtn {
+  background: white;
+  border: 1.5px solid var(--borde);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  color: var(--pm);
+  cursor: pointer;
+  transition: background .15s, border-color .15s, color .15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navBtn:hover:not(:disabled) {
+  background: var(--ps);
+  border-color: var(--pm);
+}
+.navBtn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--borde);
+  cursor: pointer;
+  padding: 0;
+  transition: background .2s, transform .2s;
+}
+.dotActive {
+  background: var(--pm);
+  transform: scale(1.3);
+}
+.dotVisited {
+  background: var(--pl);
+}

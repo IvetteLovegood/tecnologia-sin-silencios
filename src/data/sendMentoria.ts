@@ -10,17 +10,11 @@ import type { MentoriaFormData } from './types'
  * 4. Copia la URL del deploy y pégala en APPS_SCRIPT_URL abajo
  */
 
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzHXWvzqlspDXS8pPWwHwwfa3yEwRfHNC0mSWFX9k-ucDHexCl8wn0is6OqFRZyC9p3/exec'
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzUJdIso0CFlnL-fZcLgtacnPM4cgGIouH5ypWIMSxShgn-4-tnmb3g5r3yvRZrJCPw/exec'
 
 export async function enviarSolicitudMentoria(
   data: MentoriaFormData
 ): Promise<{ ok: boolean; error?: string }> {
-  if (APPS_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbzHXWvzqlspDXS8pPWwHwwfa3yEwRfHNC0mSWFX9k-ucDHexCl8wn0is6OqFRZyC9p3/exec') {
-    console.warn('Apps Script URL no configurada — modo simulación')
-    // En desarrollo, simular envío exitoso
-    await new Promise(r => setTimeout(r, 1000))
-    return { ok: true }
-  }
 
   try {
     const response = await fetch(APPS_SCRIPT_URL, {

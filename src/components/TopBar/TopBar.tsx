@@ -6,14 +6,17 @@ interface Props {
   caminoLabel: string
   caminoClass: string
   onBack: () => void
+  onHome: () => void
 }
 
-export function TopBar({ step, total, caminoLabel, caminoClass, onBack }: Props) {
+export function TopBar({ step, total, caminoLabel, caminoClass, onBack, onHome }: Props) {
   if (step === 0) return null
 
   return (
     <nav className={styles.bar}>
-      <span className={styles.logo}>TSS</span>
+      <button className={styles.homeBtn} onClick={onHome} aria-label="Ir al inicio" title="Ir al inicio">
+        ⌂
+      </button>
       <span className={`${styles.camino} ${styles[caminoClass]}`}>{caminoLabel}</span>
       <div className={styles.track}>
         {Array.from({ length: total }).map((_, i) => (

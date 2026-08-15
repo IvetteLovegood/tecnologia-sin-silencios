@@ -17,19 +17,25 @@
   background: var(--bg);
   border-radius: 20px 20px 0 0;
   width: 100%;
-  max-width: 520px;
-  max-height: 80vh;
-  overflow-y: auto;
-  padding: 28px 24px 32px;
+  max-width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
   position: relative;
   animation: slideUp .22s ease;
 }
 
 /* En desktop, centrar como modal flotante */
-@media (min-width: 540px) {
-  .overlay { align-items: center; padding: 16px; }
+@media (min-width: 640px) {
+  .overlay {
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
   .modal {
     border-radius: 20px;
+    max-width: 540px;
+    width: 100%;
     max-height: 85vh;
   }
 }
@@ -56,11 +62,11 @@
 .close:hover { background: var(--borde); }
 
 .header {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 20px;
-  padding-right: 28px;
+  padding: 28px 52px 20px 24px;
 }
 
 .ico {
@@ -77,10 +83,12 @@
 }
 
 .body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 24px;
 }
 
 .seccion {
@@ -106,7 +114,8 @@
 }
 
 .btnCerrar {
-  width: 100%;
+  flex-shrink: 0;
+  margin: 20px 24px 28px;
   padding: 13px;
   background: var(--p);
   color: white;

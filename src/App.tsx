@@ -52,6 +52,7 @@ export default function App() {
         caminoLabel={data.topLabel}
         caminoClass={data.topClass}
         onBack={prev}
+        onHome={reset}
       />
       {step === 0 && <Home onSelect={handleSelect} />}
       {step >= 1 && step <= 8 && (
