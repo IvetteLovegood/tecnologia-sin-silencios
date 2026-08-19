@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { UserResponses, MentoriaFormData } from '../../data/types'
 import { derivarPerfil } from '../../data/adaptive'
 import { enviarSolicitudMentoria, resumirRespuestas } from '../../data/sendMentoria'
@@ -13,6 +13,19 @@ interface Props {
 type Paso = 'consentimiento' | 'formulario' | 'enviando' | 'exito' | 'error'
 
 export function MentoriaModal({ camino, responses, onClose }: Props) {
+  useEffect(() => {
+    const scrollY = window.scrollY
+    document.body.style.position = 'fixed'
+    document.body.style.top = `-${scrollY}px`
+    document.body.style.width = '100%'
+    return () => {
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      window.scrollTo(0, scrollY)
+    }
+  }, [])
+
   const [paso, setPaso] = useState<Paso>('consentimiento')
   const [compartir, setCompartir] = useState(true)
   const [form, setForm] = useState({
