@@ -204,16 +204,26 @@ export function Journey({ data, step, camino, responses, onUpdate, onNext, onPre
           <p className={styles.eyebrow}>Módulo 5 de 7</p>
           <h2 className={styles.title}>El mito de que hay personas "naturalmente buenas" para tech</h2>
           <p className={styles.intro}>
-            En casi todos los espacios de tecnología existe una idea implícita: que hay personas que "nacen" para esto, que lo entienden de forma natural, que son brillantes de origen. Y que las demás — si tienen que esforzarse, preguntar o tardar más — quizás no son para esto.
+            {camino === 'prepa'
+              ? 'En casi todos los espacios de tecnología existe una idea implícita: que hay personas que "nacen" para esto, que lo entienden de forma natural, que son brillantes de origen. Y que las demás — si tienen que esforzarse, preguntar o tardar más — quizás no son para esto. Esa idea puede alejarte de tech incluso antes de intentarlo.'
+              : 'En casi todos los espacios de tecnología existe una idea implícita: que hay personas que "nacen" para esto, que lo entienden de forma natural, que son brillantes de origen. Y que las demás — si tienen que esforzarse, preguntar o tardar más — quizás no son para esto.'}
           </p>
           <div className={styles.mito}>
             <div className={styles.mitoLabel}>¿Cómo se ve esto en la práctica?</div>
-            {[
-              { ico: '⚡', txt: 'Quien pregunta mucho en clase o en el equipo "quizás no está al nivel".' },
-              { ico: '🏆', txt: 'El éxito se explica por talento individual, no por redes de apoyo, tiempo o recursos.' },
-              { ico: '🚪', txt: 'Si tardas más que otros en aprender algo, internalizas que "no eres buena para esto".' },
-              { ico: '🔇', txt: 'Las personas que no encajan en el estereotipo del "programador brillante" terminan silenciándose.' },
-            ].map((item, i) => (
+            {(camino === 'prepa'
+              ? [
+                { ico: '⚡', txt: 'Quien pregunta mucho en clase o en el club de tech "quizás no está al nivel".' },
+                { ico: '🏆', txt: 'El éxito se explica por talento individual, no por redes de apoyo, tiempo o recursos.' },
+                { ico: '🚪', txt: 'Si tardas más que otros en aprender algo, internalizas que "no eres buena para esto".' },
+                { ico: '🔇', txt: 'Las personas que no encajan en el estereotipo del "nerd de la compu" terminan alejándose antes de intentarlo.' },
+              ]
+              : [
+                { ico: '⚡', txt: 'Quien pregunta mucho en clase o en el equipo "quizás no está al nivel".' },
+                { ico: '🏆', txt: 'El éxito se explica por talento individual, no por redes de apoyo, tiempo o recursos.' },
+                { ico: '🚪', txt: 'Si tardas más que otros en aprender algo, internalizas que "no eres buena para esto".' },
+                { ico: '🔇', txt: 'Las personas que no encajan en el estereotipo del "programador brillante" terminan silenciándose.' },
+              ]
+            ).map((item, i) => (
               <div key={i} className={styles.mitoItem}>
                 <span className={styles.mitoIco}>{item.ico}</span>
                 <span className={styles.mitoTxt}>{item.txt}</span>
@@ -232,11 +242,18 @@ export function Journey({ data, step, camino, responses, onUpdate, onNext, onPre
         </div>
         <div className={styles.colRight}>
           <SolidarityBanner message="No estás sola si alguna vez pensaste que no eras suficientemente buena para esto. Ese pensamiento muchas veces viene de afuera — de espacios que no estaban diseñados para incluirte — no de lo que tú realmente eres o puedes." />
-          <QuestionSlider label="¿Esto te resuena?" questions={camino === 'est'
+          <QuestionSlider label="¿Esto te resuena?" questions={
+            camino === 'est'
             ? [
               { texto: '¿Alguna vez sentiste que tardabas más que tus compañeros en entender algo y lo interpretaste como una señal de que no eras buena para la carrera?', detalle: { titulo: '¿Por qué tardarse más no significa saber menos?', explicacion: 'La velocidad de aprendizaje depende enormemente del contexto de partida: acceso a computadora desde niña, cursos previos, redes de apoyo. Quien llegó con más exposición previa no es más "talentosa" — tuvo más práctica antes.', ejemplo: 'Dos personas en el mismo curso. Una lleva programando desde los 12. La otra empezó hace seis meses. La diferencia de ritmo no es de capacidad — es de punto de partida.' } },
               { texto: '¿Has visto que el reconocimiento en tu clase o equipo recae siempre en las mismas personas, como si tuvieran algo que otras no tienen?', detalle: { titulo: 'El talento como construcción social', explicacion: 'El "talento" en tech muchas veces es visibilidad: quien habla más fuerte, quien tiene más confianza, quien lleva más tiempo en el espacio. Eso no es igual a saber más.', ejemplo: 'En clase, la persona que más participa parece más capaz. Pero participar en voz alta requiere sentirse segura en ese espacio — y esa seguridad no se reparte igual.' } },
               { texto: '¿Alguna vez dejaste de preguntar en clase por miedo a parecer menos capaz?' },
+            ]
+            : camino === 'prepa'
+            ? [
+              { texto: '¿Alguna vez sentiste que tardabas más que tus compañeros en entender algo en clase o en un taller de tech y lo interpretaste como que no eras buena para esto?', detalle: { titulo: '¿Por qué tardarse más no significa saber menos?', explicacion: 'La velocidad de aprendizaje depende enormemente del contexto de partida: acceso a computadora desde niña, cursos previos, redes de apoyo. Quien llegó con más exposición previa no es más "talentosa" — tuvo más práctica antes.', ejemplo: 'Dos compañeras en el mismo taller. Una lleva usando computadora desde los 8 años. La otra apenas tuvo acceso este año. La diferencia de ritmo no es de capacidad — es de punto de partida.' } },
+              { texto: '¿Has notado que el reconocimiento en tu clase o club de tech recae siempre en las mismas personas, como si tuvieran algo que otras no tienen?', detalle: { titulo: 'El talento como construcción social', explicacion: 'El "talento" en tech muchas veces es visibilidad: quien habla más fuerte, quien tiene más confianza, quien lleva más tiempo en el espacio. Eso no es igual a saber más.', ejemplo: 'En clase, la persona que más participa parece más capaz. Pero participar en voz alta requiere sentirse segura en ese espacio — y esa seguridad no se reparte igual.' } },
+              { texto: '¿Alguna vez dejaste de preguntar en clase o en un taller por miedo a parecer menos capaz?' },
             ]
             : [
               { texto: '¿Alguna vez sentiste que necesitabas más tiempo o apoyo para algo y lo interpretaste como que no encajabas en el equipo?' },
