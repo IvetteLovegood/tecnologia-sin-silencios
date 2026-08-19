@@ -57,7 +57,7 @@ export function Home({ onSelect }: Props) {
       <div className={styles.content}>
         <div className={styles.tagTop}>
           <span className={styles.liveDot} />
-          Para personas en TI
+          Para mujeres interesadas en tech
         </div>
         <div className={styles.codeTag}>// herramienta de mentoría feminista</div>
         <h1 className={styles.title}>
