@@ -40,7 +40,7 @@ export function Home({ onSelect }: Props) {
             <div className={styles.rutaIco}>📚</div>
             <div className={styles.rutaTitle}>Todavía eligiendo</div>
             <div className={styles.rutaDesc}>
-              Estoy en secundaria o prepa y explorando si tech es para mí.
+              Estoy en secundaria o prepa y explorando si la tecnología es para mí.
             </div>
             <div className={`${styles.rutaCta} ${styles.rutaCtaPrepa}`}>Empezar →</div>
           </button>
@@ -57,7 +57,7 @@ export function Home({ onSelect }: Props) {
       <div className={styles.content}>
         <div className={styles.tagTop}>
           <span className={styles.liveDot} />
-          Para mujeres interesadas en tech
+          Para mujeres interesadas en tecnología
         </div>
         <div className={styles.codeTag}>// herramienta de mentoría feminista</div>
         <h1 className={styles.title}>
@@ -66,8 +66,8 @@ export function Home({ onSelect }: Props) {
         </h1>
         <p className={styles.sub}>
           Una guía para cuando vives algo incómodo en tu escuela, tu carrera
-          o tu trabajo en tech, y no sabes cómo explicarlo. Para que puedas
-          entrar o quedarte en tech con más claridad y sin dudar de ti misma.
+          o tu trabajo en tecnología, y no sabes cómo explicarlo. Para que puedas
+          entrar o quedarte en tecnología con más claridad y sin dudar de ti misma.
         </p>
 
         <div className={styles.rutas}>
@@ -76,7 +76,7 @@ export function Home({ onSelect }: Props) {
             <div className={styles.rutaIco}>🎓</div>
             <div className={styles.rutaTitle}>Soy estudiante</div>
             <div className={styles.rutaDesc}>
-              Secundaria, prepa, carrera tech, bootcamp, primer internship.
+              Secundaria, prepa, carrera en tecnología, bootcamp, primer internship.
             </div>
             <div className={styles.rutaCta}>Ver opciones →</div>
           </button>
@@ -84,7 +84,7 @@ export function Home({ onSelect }: Props) {
           <button className={styles.ruta} onClick={() => onSelect('pro')}>
             <span className={`${styles.badge} ${styles.badgeSec}`}>También disponible</span>
             <div className={styles.rutaIco}>💻</div>
-            <div className={styles.rutaTitle}>Ya trabajo en tech</div>
+            <div className={styles.rutaTitle}>Ya trabajo en tecnología</div>
             <div className={styles.rutaDesc}>
               Equipo de desarrollo, primer empleo, trabajo remoto, empresa.
             </div>
