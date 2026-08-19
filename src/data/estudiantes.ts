@@ -1,6 +1,9 @@
 import type { CaminoData } from './types'
-import { detalleBarreras } from './barreras'
-import { detallePreguntas } from './preguntas'
+import { getDetalleBarreras } from './barreras'
+import { getDetallePreguntas } from './preguntas'
+
+const detalleBarreras = getDetalleBarreras('est')
+const detallePreguntas = getDetallePreguntas('est')
 
 export const estudiantes: CaminoData = {
   topLabel: '🎓 estudiantes',

@@ -1,6 +1,9 @@
 import type { CaminoData } from './types'
-import { detalleBarreras } from './barreras'
-import { detallePreguntas } from './preguntas'
+import { getDetalleBarreras } from './barreras'
+import { getDetallePreguntas } from './preguntas'
+
+const detalleBarreras = getDetalleBarreras('prepa')
+const detallePreguntas = getDetallePreguntas('prepa')
 
 export const preparatoria: CaminoData = {
   topLabel: '📚 prepa / secundaria',
