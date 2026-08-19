@@ -45,6 +45,19 @@ export function Result({ data, camino, responses, onReset }: Props) {
         <p className={styles.resSub}>{adaptacion.mensajeApertura}</p>
       </div>
 
+      {/* CTA con modal integrado */}
+      {(adaptacion.ctaUrgente || responses.quiereMentoria) ? (
+        <div className={styles.ctaUrgente}>
+          <div className={styles.ctaUrgenteTitle}>💬 Hay una ruta directa para ti</div>
+          <p className={styles.ctaUrgenteDesc}>
+            Basado en lo que recorriste hoy, una conversación personalizada podría ayudarte más que seguir explorando sola. La mentoría es breve, confidencial y sin costo.
+          </p>
+          <MentoriaCTA ctaTxt={data.ctaTxt} onSolicitar={() => setModalAbierto(true)} />
+        </div>
+      ) : (
+        <MentoriaCTA ctaTxt={data.ctaTxt} onSolicitar={() => setModalAbierto(true)} />
+      )}
+
       <div className={styles.hallazgos}>
         <div className={styles.hTitle}>Lo que exploraste</div>
         {hallazgos.map((txt, i) => (
@@ -80,19 +93,6 @@ export function Result({ data, camino, responses, onReset }: Props) {
           La sesión es confidencial — lo que conversemos se queda entre nosotras.
         </span>
       </div>
-
-      {/* CTA con modal integrado */}
-      {(adaptacion.ctaUrgente || responses.quiereMentoria) ? (
-        <div className={styles.ctaUrgente}>
-          <div className={styles.ctaUrgenteTitle}>💬 Hay una ruta directa para ti</div>
-          <p className={styles.ctaUrgenteDesc}>
-            Basado en lo que recorriste hoy, una conversación personalizada podría ayudarte más que seguir explorando sola. La mentoría es breve, confidencial y sin costo.
-          </p>
-          <MentoriaCTA ctaTxt={data.ctaTxt} onSolicitar={() => setModalAbierto(true)} />
-        </div>
-      ) : (
-        <MentoriaCTA ctaTxt={data.ctaTxt} onSolicitar={() => setModalAbierto(true)} />
-      )}
 
       <div style={{ textAlign: 'center', marginTop: 28 }}>
         <button className={styles.btnReset} onClick={onReset}>← Volver al inicio</button>
