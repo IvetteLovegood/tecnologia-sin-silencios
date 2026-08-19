@@ -21,6 +21,9 @@ export function YesNoQuestion({
   function handle(v: 'si' | 'no' | 'tal_vez') {
     setSel(v)
     onChange?.(v)
+    setTimeout(() => {
+      document.getElementById('nav-btns')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }, 300)
   }
 
   const opts: { val: 'si' | 'no' | 'tal_vez'; label: string; ico: string }[] = [

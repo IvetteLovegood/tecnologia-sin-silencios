@@ -24,7 +24,7 @@ interface Props {
 export function Journey({ data, step, camino, responses, onUpdate, onNext, onPrev }: Props) {
 
   const NavBtns = ({ prevLabel = '← Anterior', nextLabel = 'Siguiente →' }: { prevLabel?: string; nextLabel?: string }) => (
-    <div className={styles.navBtns}>
+    <div className={styles.navBtns} id="nav-btns">
       <button className={styles.btnSecondary} onClick={onPrev}>{prevLabel}</button>
       <button className={styles.btnPrimary} onClick={onNext}>{nextLabel}</button>
     </div>
