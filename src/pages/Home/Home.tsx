@@ -65,8 +65,8 @@ export function Home({ onSelect }: Props) {
           <span>sin silencios</span>
         </h1>
         <p className={styles.sub}>
-          Una guía para cuando algo no cuadra en tu escuela, tu carrera
-          o tu trabajo en tech — y no sabes bien cómo nombrarlo.
+          Una guía para cuando vives algo incómodo en tu escuela, tu carrera
+          o tu trabajo en tech, y no sabes cómo explicarlo.
         </p>
 
         <div className={styles.rutas}>
