@@ -6,11 +6,12 @@ interface Props {
   caminoLabel: string
   caminoClass: string
   onBack: () => void
+  onNext: () => void
   onHome: () => void
   onMentoria: () => void
 }
 
-export function TopBar({ step, total, caminoLabel, caminoClass, onBack, onHome, onMentoria }: Props) {
+export function TopBar({ step, total, caminoLabel, caminoClass, onBack, onNext, onHome, onMentoria }: Props) {
   if (step === 0) return null
 
   return (
@@ -29,8 +30,13 @@ export function TopBar({ step, total, caminoLabel, caminoClass, onBack, onHome, 
       </div>
       <span className={styles.num}>{step} / {total}</span>
       {step > 1 && (
-        <button className={styles.back} onClick={onBack}>
-          ← volver
+        <button className={styles.back} onClick={onBack} title="Paso anterior">
+          ← <span>volver</span>
+        </button>
+      )}
+      {step >= 1 && step < total && (
+        <button className={styles.next} onClick={onNext} title="Siguiente paso">
+          <span>siguiente</span> →
         </button>
       )}
       <button className={styles.mentoriaBtn} onClick={onMentoria} title="Solicitar mentoría">

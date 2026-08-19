@@ -55,6 +55,7 @@ export default function App() {
         caminoLabel={data.topLabel}
         caminoClass={data.topClass}
         onBack={prev}
+        onNext={next}
         onHome={reset}
         onMentoria={() => setMentoriaAbierta(true)}
       />
