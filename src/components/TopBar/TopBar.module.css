@@ -77,3 +77,25 @@
   padding: 0;
 }
 .back:hover { color: var(--txt); }
+
+.mentoriaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--p);
+  color: white;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background .15s;
+}
+.mentoriaBtn:hover { background: var(--pm); }
+
+@media (max-width: 480px) {
+  .mentoriaBtn span { display: none; }
+}

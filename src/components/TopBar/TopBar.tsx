@@ -7,9 +7,10 @@ interface Props {
   caminoClass: string
   onBack: () => void
   onHome: () => void
+  onMentoria: () => void
 }
 
-export function TopBar({ step, total, caminoLabel, caminoClass, onBack, onHome }: Props) {
+export function TopBar({ step, total, caminoLabel, caminoClass, onBack, onHome, onMentoria }: Props) {
   if (step === 0) return null
 
   return (
@@ -32,6 +33,9 @@ export function TopBar({ step, total, caminoLabel, caminoClass, onBack, onHome }
           ← volver
         </button>
       )}
+      <button className={styles.mentoriaBtn} onClick={onMentoria} title="Solicitar mentoría">
+        💬 <span>Mentoría</span>
+      </button>
     </nav>
   )
 }

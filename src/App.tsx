@@ -7,6 +7,7 @@ import { TopBar } from './components/TopBar/TopBar'
 import { Home } from './pages/Home/Home'
 import { Journey } from './pages/Journey/Journey'
 import { Result } from './pages/Result/Result'
+import { MentoriaModal } from './components/MentoriaModal/MentoriaModal'
 
 // 0=home, 1=contexto+eval, 2-8=módulos 1-7, 9=resultado
 const TOTAL_STEPS = 9
@@ -15,6 +16,7 @@ export default function App() {
   const [step, setStep] = useState(0)
   const [camino, setCamino] = useState<Camino>('est')
   const [responses, setResponses] = useState<UserResponses>({})
+  const [mentoriaAbierta, setMentoriaAbierta] = useState(false)
 
   const data = camino === 'est' ? estudiantes : camino === 'prepa' ? preparatoria : profesionistas
 
@@ -54,6 +56,7 @@ export default function App() {
         caminoClass={data.topClass}
         onBack={prev}
         onHome={reset}
+        onMentoria={() => setMentoriaAbierta(true)}
       />
       {step === 0 && <Home onSelect={handleSelect} />}
       {step >= 1 && step <= 8 && (
@@ -73,6 +76,13 @@ export default function App() {
           camino={camino}
           responses={responses}
           onReset={reset}
+        />
+      )}
+      {mentoriaAbierta && (
+        <MentoriaModal
+          camino={camino}
+          responses={responses}
+          onClose={() => setMentoriaAbierta(false)}
         />
       )}
     </>
