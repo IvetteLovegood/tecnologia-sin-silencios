@@ -59,7 +59,6 @@ export function Home({ onSelect }: Props) {
           <span className={styles.liveDot} />
           Para mujeres interesadas en tecnología
         </div>
-        <div className={styles.codeTag}>// herramienta de mentoría feminista</div>
         <h1 className={styles.title}>
           Tecnología<br />
           <span>sin silencios</span>
