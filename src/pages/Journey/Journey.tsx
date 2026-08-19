@@ -150,7 +150,9 @@ export function Journey({ data, step, camino, responses, onUpdate, onNext, onPre
           <SolidarityBanner message="Nota sobre cómo procesamos distinto: si necesitas más tiempo, instrucciones muy claras o ambientes sin ruido para trabajar bien, eso no es un defecto. Es una forma válida de funcionar." />
           <QuestionSlider label="¿Algo de esto te resulta familiar?" questions={data.m3Qs} />
           <YesNoQuestion
-            question="¿Reconoces alguna de estas dinámicas en el espacio donde estudias o trabajas?"
+            question={camino === 'prepa'
+              ? '¿Reconoces alguna de estas dinámicas en tu escuela o en espacios de tech donde participas?'
+              : '¿Reconoces alguna de estas dinámicas en el espacio donde estudias o trabajas?'}
             yesLabel="Sí, la reconozco"
             maybeLabel="Algo parecido"
             noLabel="No lo veo"
