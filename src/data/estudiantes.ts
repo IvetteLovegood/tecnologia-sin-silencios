@@ -12,9 +12,9 @@ export const estudiantes: CaminoData = {
   contextQuestions: [
     {
       id: 'lenguaje',
-      label: '¿Con qué lenguaje o tecnología trabajas más seguido?',
+      label: '¿Con qué área de tech trabajas o te interesa más?',
       type: 'chips',
-      options: ['Python', 'JavaScript', 'Java', 'C / C++', 'TypeScript', 'Otro'],
+      options: ['Programación / Software', 'Datos / IA', 'Diseño UX/UI', 'Ciberseguridad', 'Redes / Infraestructura', 'Hardware / Robótica', 'Otra'],
     },
     {
       id: 'etapa',

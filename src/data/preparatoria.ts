@@ -18,9 +18,9 @@ export const preparatoria: CaminoData = {
     },
     {
       id: 'lenguaje',
-      label: '¿Qué tanto contacto has tenido con tech o programación?',
+      label: '¿Qué tanto contacto has tenido con tech (programación, datos, diseño, robótica, etc.)?',
       type: 'chips',
-      options: ['Casi nada', 'Un poco en clases', 'He tomado cursos extra', 'Ya programo por mi cuenta'],
+      options: ['Casi nada', 'Un poco en clases', 'He tomado cursos extra', 'Ya lo practico por mi cuenta'],
     },
   ],
 
