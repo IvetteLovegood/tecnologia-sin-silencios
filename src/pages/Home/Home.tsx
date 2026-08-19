@@ -67,7 +67,7 @@ export function Home({ onSelect }: Props) {
         <p className={styles.sub}>
           Una guía para cuando vives algo incómodo en tu escuela, tu carrera
           o tu trabajo en tech, y no sabes cómo explicarlo. Para que puedas
-          quedarte en tech con más claridad y sin dudar de ti misma.
+          entrar o quedarte en tech con más claridad y sin dudar de ti misma.
         </p>
 
         <div className={styles.rutas}>
