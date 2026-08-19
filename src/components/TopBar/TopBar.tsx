@@ -17,7 +17,7 @@ export function TopBar({ step, total, caminoLabel, caminoClass, onBack, onNext, 
   return (
     <nav className={styles.bar}>
       <button className={styles.homeBtn} onClick={onHome} aria-label="Ir al inicio" title="Ir al inicio">
-        🏠
+        ⌂
       </button>
       <span className={`${styles.camino} ${styles[caminoClass]}`}>{caminoLabel}</span>
       <div className={styles.track}>
